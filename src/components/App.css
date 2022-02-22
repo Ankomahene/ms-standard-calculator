@@ -1,0 +1,121 @@
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    color: #fff
+}
+
+.calc {
+    background-color: #2e3743;
+    padding: 10px;
+}
+
+.calc h3 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+}
+
+.calc-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: minmax(3rem, auto) repeat(5, 60px);
+    gap: 10px;
+}
+
+button {
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background-color: #636972;
+    color: #fff;
+    font-size: medium;
+    font-family: "Roboto";
+}
+
+button:hover {
+    background-color: #545961;
+}
+
+.equal-btn {
+    grid-column: span 2;
+    background-color: #f2994a;
+}
+
+.equal-btn:hover {
+    background-color: #d88841;
+}
+
+.output {
+    grid-column: 1/-1;
+    background-color: #3f4957;
+    font-size: 22px;
+    padding: 15px 5px 5px 5px;
+    /* display: flex; */
+    /* justify-content: flex-end;
+    align-items: flex-end; */
+    text-align: end;
+    align-content: flex-end;
+    overflow-wrap: break-word;
+}
+
+.basic-operation-btn {
+    background-color: #9b51e0;
+
+}
+
+.basic-operation-btn:hover {
+    background-color: #904dd0;
+
+}
+
+.history {
+    background-color: #232b36;
+    width: 200px;
+    margin-left: 10px;
+    position: relative;
+    font-size: small;
+    color: #9fa1a3;
+}
+
+.history .header {
+    text-align: center;
+    border-bottom: 1px solid #404954;
+    padding: 5px;
+    color: #fff;
+}
+.history button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #9fa1a3;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.history button:hover {
+    background-color: #292f37;
+}
+
+.history .history-list {
+    height: 340px;
+    overflow-y: auto;
+    text-align: end;
+    
+}
+.history-item {
+    padding: 5px;
+    border-bottom: 1px solid #2e3743;
+    cursor: pointer;
+}
+
+.history-item:hover {
+    background-color:#242c37;
+}
