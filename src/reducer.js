@@ -127,7 +127,7 @@ const addDigit = (state, operand, payload) => {
 	if (payload.digit !== '0' && payload.digit !== '.' && state.previousOperand === '0') {
 		return { ...state, [operand]: payload.digit };
 	}
-	if (state.overwrite && !state.operation) {
+	if (state.overwrite && !state.operation && payload.digit !== '.') {
 		return { ...state, previousOperand: payload.digit, operation: null, currentOperand: null, overwrite: false };
 	}
 	return { ...state, [operand]: `${state[operand] || ''}${payload.digit}` };
